@@ -15,7 +15,7 @@ class ActionController::LogSubscriber
       start_processing_without_flog(event)
     end
   end
-  alias_method_chain :start_processing, :flog
+  alias_method :start_processing, :flog
 
   private
   def replace_params(params)

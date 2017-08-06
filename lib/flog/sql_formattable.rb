@@ -14,7 +14,7 @@ class ActiveRecord::LogSubscriber
       sql_without_flog(event)
     end
   end
-  alias_method_chain :sql, :flog
+  alias_method :sql, :flog
 
   private
   def format_sql(sql)
